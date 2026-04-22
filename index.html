@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPIC Lab | Tongji University</title>
+  <meta name="description" content="EPIC Lab - Embodied Perception & Intelligence Center, College of Electronics and Information Engineering, Tongji University">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+  <!-- ==========================================
+       Navigation Bar
+       ========================================== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        EPIC <span class="lab-text">Lab</span>
+      </a>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html" class="nav-link active">
+          <span data-lang="zh">主页</span>
+          <span data-lang="en" class="hidden">Home</span>
+        </a>
+        <a href="publications.html" class="nav-link">
+          <span data-lang="zh">论文</span>
+          <span data-lang="en" class="hidden">Publications</span>
+        </a>
+        <a href="activities.html" class="nav-link">
+          <span data-lang="zh">活动</span>
+          <span data-lang="en" class="hidden">Activities</span>
+        </a>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button class="lang-switch" id="langSwitch" title="Switch Language">EN</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       Hero Section
+       ========================================== -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">EPIC <span class="lab-highlight">Lab</span></h1>
+      <p class="hero-subtitle">Embodied Perception &amp; Intelligence Center</p>
+      <p class="hero-subtitle zh-only" data-lang="zh">具身感知与智能实验室</p>
+      <p class="hero-description">
+        <span data-lang="zh">Advancing embodied multimedia intelligence for smart industry and autonomous systems.</span>
+        <span data-lang="en" class="hidden">Advancing embodied multimedia intelligence for smart industry and autonomous systems.</span>
+      </p>
+      <p class="hero-affiliation">
+        <span data-lang="zh">同济大学 电子与信息工程学院</span>
+        <span data-lang="en" class="hidden">College of Electronics and Information Engineering, Tongji University</span>
+      </p>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ==========================================
+         Research Areas
+         ========================================== -->
+    <section class="section" id="research">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span data-lang="zh">研究方向</span>
+          <span data-lang="en" class="hidden">Research Areas</span>
+        </h2>
+        <p class="section-subtitle">
+          <span data-lang="zh">聚焦前沿技术，推动智能感知创新</span>
+          <span data-lang="en" class="hidden">Focusing on cutting-edge technologies and intelligent perception innovation</span>
+        </p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">
+            <span data-lang="zh">视频异常检测</span>
+            <span data-lang="en" class="hidden">Video Anomaly Detection</span>
+          </h3>
+          <p class="card-text">
+            <span data-lang="zh">异常事件检测、时空建模、因果推理</span>
+            <span data-lang="en" class="hidden">Anomalous event detection, spatio-temporal modeling, causal reasoning</span>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3 class="card-title">
+            <span data-lang="zh">具身多模态感知</span>
+            <span data-lang="en" class="hidden">Embodied Multimodal Perception</span>
+          </h3>
+          <p class="card-text">
+            <span data-lang="zh">具身感知、具身多媒体</span>
+            <span data-lang="en" class="hidden">Embodied perception, embodied multimedia</span>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3 class="card-title">
+            <span data-lang="zh">多模态大模型</span>
+            <span data-lang="en" class="hidden">Multimodal Large Models</span>
+          </h3>
+          <p class="card-text">
+            <span data-lang="zh">多模态大模型、医疗多智能体、边云协同</span>
+            <span data-lang="en" class="hidden">Multimodal LLMs, medical multi-agents, edge-cloud collaboration</span>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏭</div>
+          <h3 class="card-title">
+            <span data-lang="zh">智能制造与自动驾驶</span>
+            <span data-lang="en" class="hidden">Smart Industry &amp; Autonomous Driving</span>
+          </h3>
+          <p class="card-text">
+            <span data-lang="zh">工业感知、自动驾驶、环境理解</span>
+            <span data-lang="en" class="hidden">Industrial perception, autonomous driving, scene understanding</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Team Section
+         ========================================== -->
+    <section id="team" style="background:var(--bg-light);">
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span data-lang="zh">团队成员</span>
+            <span data-lang="en" class="hidden">Team</span>
+          </h2>
+          <p class="section-subtitle">
+            <span data-lang="zh">汇聚优秀人才，共创科研成果</span>
+            <span data-lang="en" class="hidden">Talented researchers working together</span>
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="team-grid">
+          <!-- Team Leader -->
+          <div class="team-card">
+            <span class="team-role leader">
+              <span data-lang="zh">团队顾问</span>
+              <span data-lang="en" class="hidden">Advisor</span>
+            </span>
+            <h3 class="team-name">Prof. Hong Chen</h3>
+            <p class="team-affiliation">Tongji University</p>
+            <p class="team-bio">
+              <span data-lang="zh">国家杰青，IEEE Fellow，CAA Fellow</span>
+              <span data-lang="en" class="hidden">National Science Fund for Distinguished Young Scholars, IEEE Fellow, CAA Fellow</span>
+            </p>
+          </div>
+
+          <!-- PI -->
+          <div class="team-card">
+            <span class="team-role pi">
+              <span data-lang="zh">课题组负责人</span>
+              <span data-lang="en" class="hidden">Principal Investigator</span>
+            </span>
+            <h3 class="team-name">Dr. Yang Liu</h3>
+            <p class="team-affiliation">Assistant Professor, Tongji University</p>
+          </div>
+
+          <!-- Collaborators -->
+          <div class="team-card">
+            <span class="team-role collaborator">
+              <span data-lang="zh">合作教师</span>
+              <span data-lang="en" class="hidden">Collaborators</span>
+            </span>
+            <h3 class="team-name" style="margin-bottom:12px;">
+              <span data-lang="zh">合作教师</span>
+              <span data-lang="en" class="hidden">Collaborators</span>
+            </h3>
+            <p class="team-bio">
+              <a href="https://weizhou-geek.github.io/" target="_blank" rel="noopener">Prof. Wei Zhou</a> (Cardiff University)<br>
+              Prof. Lei Zhang (Tongji University)<br>
+              Prof. Lulu Guo (Tongji University)<br>
+              Prof. Yuqing Lin (Tongji University)
+            </p>
+          </div>
+        </div>
+
+        <!-- Students Table -->
+        <div style="margin-top:48px;">
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;">
+            <span data-lang="zh">在读学生</span>
+            <span data-lang="en" class="hidden">Students</span>
+          </h3>
+          <div class="students-table-wrapper">
+            <table class="students-table">
+              <thead>
+                <tr data-lang="zh">
+                  <th>姓名</th>
+                  <th>年级</th>
+                  <th>学位</th>
+                  <th>状态</th>
+                </tr>
+                <tr data-lang="en" class="hidden">
+                  <th>Name</th>
+                  <th>Year</th>
+                  <th>Degree</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pujun Liu</td>
+                  <td>2024</td>
+                  <td>Ph.D.</td>
+                  <td>
+                    <span class="status-badge status-active" data-lang="zh">在读</span>
+                    <span class="status-badge status-active hidden" data-lang="en">Active</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Han Huang</td>
+                  <td>2025</td>
+                  <td>M.S.</td>
+                  <td>
+                    <span class="status-badge status-active" data-lang="zh">在读</span>
+                    <span class="status-badge status-active hidden" data-lang="en">Active</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Wenxin Feng</td>
+                  <td>2026</td>
+                  <td>M.S.</td>
+                  <td>
+                    <span class="status-badge status-upcoming" data-lang="zh">即将入学</span>
+                    <span class="status-badge status-upcoming hidden" data-lang="en">Upcoming</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jiale Bian</td>
+                  <td>2026</td>
+                  <td>M.S.</td>
+                  <td>
+                    <span class="status-badge status-upcoming" data-lang="zh">即将入学</span>
+                    <span class="status-badge status-upcoming hidden" data-lang="en">Upcoming</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jie Wen</td>
+                  <td>2026</td>
+                  <td>M.S.</td>
+                  <td>
+                    <span class="status-badge status-upcoming" data-lang="zh">即将入学</span>
+                    <span class="status-badge status-upcoming hidden" data-lang="en">Upcoming</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Join Us Section
+         ========================================== -->
+    <section class="section" id="join">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span data-lang="zh">加入我们</span>
+          <span data-lang="en" class="hidden">Join Us</span>
+        </h2>
+        <p class="section-subtitle">
+          <span data-lang="zh">期待与你共同探索人工智能的边界</span>
+          <span data-lang="en" class="hidden">Explore the frontiers of AI with us</span>
+        </p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="cta-section">
+        <div class="cta-grid">
+          <div class="cta-card">
+            <h3>🎓
+              <span data-lang="zh">本科生</span>
+              <span data-lang="en" class="hidden">Undergraduates</span>
+            </h3>
+            <p>
+              <span data-lang="zh">欢迎有志于人工智能、计算机视觉方向的本科生提前进组，开展科研训练，培养研究能力。</span>
+              <span data-lang="en" class="hidden">Undergraduate students interested in AI and computer vision are welcome to join early for research training.</span>
+            </p>
+          </div>
+          <div class="cta-card">
+            <h3>🔬
+              <span data-lang="zh">研究生</span>
+              <span data-lang="en" class="hidden">Graduate Students</span>
+            </h3>
+            <p>
+              <span data-lang="zh">欢迎优秀硕士/博士生开展科研合作，方向包括异常检测、多模态大模型、具身感知等。</span>
+              <span data-lang="en" class="hidden">Outstanding M.S./Ph.D. students are welcome to collaborate on anomaly detection, multimodal LLMs, embodied perception, etc.</span>
+            </p>
+          </div>
+        </div>
+        <div class="cta-contact">
+          <span>📩 yangliu25@tongji.edu.cn</span>
+          <span>💬 132-6260-1101</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+  <footer class="footer">
+    <p>© 2026 EPIC Lab, Tongji University</p>
+    <p style="margin-top:4px;">📧 yangliu25@tongji.edu.cn</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
