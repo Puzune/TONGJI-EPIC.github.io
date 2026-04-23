@@ -13,6 +13,25 @@ test('homepage Chinese copy is localized for key visible text', () => {
   assert.match(indexHtml, /谷歌学术/);
 });
 
+test('homepage students include Xinwei Sun in both languages', () => {
+  assert.match(
+    indexHtml,
+    /刘普俊[\s\S]*孙鑫伟[\s\S]*黄涵/
+  );
+  assert.match(
+    indexHtml,
+    /Pujun Liu[\s\S]*Xinwei Sun[\s\S]*Han Huang/
+  );
+  assert.match(
+    indexHtml,
+    /孙鑫伟[\s\S]{0,300}<td>2024<\/td>[\s\S]{0,80}<td>Ph\.D\.<\/td>[\s\S]{0,300}>在读<\/span>/
+  );
+  assert.match(
+    indexHtml,
+    /Xinwei Sun[\s\S]{0,300}<td>2024<\/td>[\s\S]{0,80}<td>Ph\.D\.<\/td>[\s\S]{0,300}>Active<\/span>/
+  );
+});
+
 test('publications page contains the requested papers', () => {
   const expectedTitles = [
     'Networking systems for video anomaly detection: A tutorial and survey',
