@@ -5,6 +5,7 @@ import { existsSync, readFileSync } from 'node:fs';
 const indexHtml = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const publicationsHtml = readFileSync(new URL('../publications.html', import.meta.url), 'utf8');
 const activitiesHtml = readFileSync(new URL('../activities.html', import.meta.url), 'utf8');
+const notFoundHtml = readFileSync(new URL('../404.html', import.meta.url), 'utf8');
 const papersBib = readFileSync(new URL('../Papers.bib', import.meta.url), 'utf8');
 const styleCss = readFileSync(new URL('../css/style.css', import.meta.url), 'utf8');
 const mainJs = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
@@ -14,6 +15,11 @@ const sitePages = [
   { file: 'index.html', html: indexHtml, canonical: 'https://tongji-epic.github.io/' },
   { file: 'publications.html', html: publicationsHtml, canonical: 'https://tongji-epic.github.io/publications.html' },
   { file: 'activities.html', html: activitiesHtml, canonical: 'https://tongji-epic.github.io/activities.html' }
+];
+
+const htmlPages = [
+  ...sitePages,
+  { file: '404.html', html: notFoundHtml }
 ];
 
 test('homepage Chinese copy is localized for key visible text', () => {
@@ -358,6 +364,16 @@ test('site pages include canonical, favicon, and social preview metadata', () =>
     assert.match(html, /<meta property="og:title" content="[^"]+">/, `${file} should set Open Graph title`);
     assert.match(html, /<meta property="og:description" content="[^"]+">/, `${file} should set Open Graph description`);
     assert.match(html, /<meta name="twitter:card" content="summary">/, `${file} should set Twitter card metadata`);
+  });
+});
+
+test('site pages cache-bust shared CSS after icon rendering changes', () => {
+  htmlPages.forEach(({ file, html }) => {
+    assert.match(
+      html,
+      /<link rel="stylesheet" href="\/?css\/style\.css\?v=20260426-inline-icons">/,
+      `${file} should load the icon-safe stylesheet URL`
+    );
   });
 });
 
